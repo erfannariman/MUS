@@ -3,10 +3,12 @@ import numpy as np
 
 
 def create_example_df(low=100, high=50000, size=100):
-    df = pd.DataFrame({'Customer': [f'Customer{i+1}' for i in range(size)],
-                       'Value': np.random.randint(low=low, high=high, size=size)})
+    data = pd.DataFrame({
+        'Invoice': [f'Invoice{i+1}' for i in range(size)],
+        'Value': np.random.randint(low=low, high=high, size=size)
+    })
 
-    return df
+    return data
 
 
 if __name__ == '__main__':
